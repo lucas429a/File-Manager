@@ -1,0 +1,6 @@
+export * from './ProcessTagFileDTO'
+export * from './GeneratePDFDTO'
+export * from './CompanyDTO'
+export * from './OrderDTO'
+export * from './TagDTO'
+export * from './DownloadDTO'

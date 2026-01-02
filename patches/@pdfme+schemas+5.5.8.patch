@@ -1,0 +1,695 @@
+diff --git a/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/constants.js b/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/constants.js
+index 2ff7f5d..a96b388 100644
+--- a/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/constants.js
++++ b/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/constants.js
+@@ -8,12 +8,15 @@ exports.BARCODE_TYPES = [
+     'ean8',
+     'code39',
+     'code128',
++    'code128b',
++    'code93',
+     'nw7',
+     'itf14',
+     'upca',
+     'upce',
+     'gs1datamatrix',
+     'pdf417',
++    'interleaved2of5',
+ ];
+ exports.DEFAULT_BARCODE_BG_COLOR = '#ffffff';
+ exports.DEFAULT_BARCODE_COLOR = '#000000';
+diff --git a/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/helper.js b/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/helper.js
+index 552328e..1234f06 100644
+--- a/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/helper.js
++++ b/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/helper.js
+@@ -65,6 +65,18 @@ const validateBarcodeInput = (type, input) => {
+         // https://qiita.com/graminume/items/2ac8dd9c32277fa9da64
+         return !input.match(/([\u30a0-\u30ff\u3040-\u309f\u3005-\u3006\u30e0-\u9fcf]|[Ａ-Ｚａ-ｚ０-９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝〜　])+/);
+     }
++    if (type === 'code128b') {
++        // For Code128B: Subset B encodes uppercase and lowercase letters, digits, and standard ASCII symbols (space to DEL).
++        // Valid characters are ASCII 32-127.
++        const regexp = /^[\x20-\x7F]+$/;
++        return regexp.test(input);
++    }
++    if (type === 'code93') {
++        // For Code93: Valid characters are digits (0-9), uppercase alphabets (A-Z),
++        // and special symbols (-, ., $, /, +, %, space).
++        const regexp = /^[\dA-Z\-\.\$\/\+\%\s]+$/;
++        return regexp.test(input);
++    }
+     if (type === 'nw7') {
+         // For NW-7: Valid characters are digits (0-9) and symbols (-, ., $, :, /, +).
+         // The first and last characters must be one of the alphabets A-D (start/stop codes).
+@@ -109,13 +121,34 @@ const validateBarcodeInput = (type, input) => {
+         // but considering performance and library limitations, the maximum number of characters is limited (up to 1000 characters here).
+         return input.length > 0 && input.length <= 1000;
+     }
++    if (type === 'interleaved2of5') {
++        // For Interleaved 2 of 5: Valid characters are digits (0-9) only.
++        // Must have an EVEN number of digits (minimum 2).
++        const regexp = /^\d+$/;
++        if (!regexp.test(input))
++            return false;
++        // Even number of digits required
++        if (input.length % 2 !== 0)
++            return false;
++        // Minimum 2 digits
++        if (input.length < 2)
++            return false;
++        return true;
++    }
+     return false;
+ };
+ exports.validateBarcodeInput = validateBarcodeInput;
+ /**
+  * The bwip.js lib has a different name for nw7 type barcodes
++ * code128b uses code128 encoder (bwip-js automatically handles subsets)
+  */
+-const barCodeType2Bcid = (type) => type === 'nw7' ? 'rationalizedCodabar' : type;
++const barCodeType2Bcid = (type) => {
++    if (type === 'nw7')
++        return 'rationalizedCodabar';
++    if (type === 'code128b')
++        return 'code128';
++    return type;
++};
+ exports.barCodeType2Bcid = barCodeType2Bcid;
+ /**
+  *  Strip hash from the beginning of HTML hex color codes for the bwip.js lib
+@@ -125,16 +158,27 @@ exports.mapHexColorForBwipJsLib = mapHexColorForBwipJsLib;
+ const createBarCode = async (arg) => {
+     const { type, input, width, height, backgroundColor, barColor, textColor, includetext = constants_js_1.DEFAULT_BARCODE_INCLUDETEXT, } = arg;
+     const bcid = (0, exports.barCodeType2Bcid)(type);
++    console.log('[DEBUG CODE93] Type:', type, 'BCID:', bcid, 'Input:', input);
+     const scale = 5;
+     const bwipjsArg = {
+         bcid,
+         text: input,
+-        width,
+-        height,
+         scale,
+         includetext,
+         textxalign: 'center',
+     };
++    // Code93 specific parameters
++    if (type === 'code93') {
++        bwipjsArg.width = width;
++        bwipjsArg.height = height;
++        bwipjsArg.includecheck = true; // Include check digits
++        bwipjsArg.parsefnc = true; // Parse function codes
++        console.log('[DEBUG] Code93 with width:', width, 'height:', height, 'scale:', bwipjsArg.scale);
++    }
++    else {
++        bwipjsArg.width = width;
++        bwipjsArg.height = height;
++    }
+     if (backgroundColor)
+         bwipjsArg.backgroundcolor = (0, exports.mapHexColorForBwipJsLib)(backgroundColor);
+     if (barColor)
+diff --git a/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/propPanel.js b/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/propPanel.js
+index 5551a25..e09809c 100644
+--- a/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/propPanel.js
++++ b/node_modules/@pdfme/schemas/dist/cjs/src/barcodes/propPanel.js
+@@ -96,6 +96,34 @@ const barcodeDefaults = [
+             opacity: constants_js_2.DEFAULT_OPACITY,
+         },
+     },
++    {
++        defaultSchema: {
++            name: '',
++            type: 'code128b',
++            content: 'Code128B Example',
++            position,
++            ...defaultColors,
++            ...defaultTextColors,
++            ...defaultIncludetext,
++            ...default40x20,
++            rotate: 0,
++            opacity: constants_js_2.DEFAULT_OPACITY,
++        },
++    },
++    {
++        defaultSchema: {
++            name: '',
++            type: 'code93',
++            content: 'CODE93 EXAMPLE',
++            position,
++            ...defaultColors,
++            ...defaultTextColors,
++            ...defaultIncludetext,
++            ...default40x20,
++            rotate: 0,
++            opacity: constants_js_2.DEFAULT_OPACITY,
++        },
++    },
+     {
+         defaultSchema: {
+             name: '',
+@@ -125,6 +153,21 @@ const barcodeDefaults = [
+             opacity: constants_js_2.DEFAULT_OPACITY,
+         },
+     },
++    {
++        defaultSchema: {
++            name: '',
++            type: 'interleaved2of5',
++            content: '1234567890',
++            position,
++            ...defaultColors,
++            ...defaultTextColors,
++            ...defaultIncludetext,
++            ...default40x20,
++            height: 12,
++            rotate: 0,
++            opacity: constants_js_2.DEFAULT_OPACITY,
++        },
++    },
+     {
+         defaultSchema: {
+             name: '',
+diff --git a/node_modules/@pdfme/schemas/dist/esm/src/barcodes/constants.js b/node_modules/@pdfme/schemas/dist/esm/src/barcodes/constants.js
+index 9f4a695..e76251b 100644
+--- a/node_modules/@pdfme/schemas/dist/esm/src/barcodes/constants.js
++++ b/node_modules/@pdfme/schemas/dist/esm/src/barcodes/constants.js
+@@ -5,12 +5,15 @@ export const BARCODE_TYPES = [
+     'ean8',
+     'code39',
+     'code128',
++    'code128b',
++    'code93',
+     'nw7',
+     'itf14',
+     'upca',
+     'upce',
+     'gs1datamatrix',
+     'pdf417',
++    'interleaved2of5',
+ ];
+ export const DEFAULT_BARCODE_BG_COLOR = '#ffffff';
+ export const DEFAULT_BARCODE_COLOR = '#000000';
+diff --git a/node_modules/@pdfme/schemas/dist/esm/src/barcodes/helper.js b/node_modules/@pdfme/schemas/dist/esm/src/barcodes/helper.js
+index 85b6377..1ef3b19 100644
+--- a/node_modules/@pdfme/schemas/dist/esm/src/barcodes/helper.js
++++ b/node_modules/@pdfme/schemas/dist/esm/src/barcodes/helper.js
+@@ -59,6 +59,18 @@ export const validateBarcodeInput = (type, input) => {
+         // https://qiita.com/graminume/items/2ac8dd9c32277fa9da64
+         return !input.match(/([\u30a0-\u30ff\u3040-\u309f\u3005-\u3006\u30e0-\u9fcf]|[Ａ-Ｚａ-ｚ０-９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝〜　])+/);
+     }
++    if (type === 'code128b') {
++        // For Code128B: Subset B encodes uppercase and lowercase letters, digits, and standard ASCII symbols (space to DEL).
++        // Valid characters are ASCII 32-127.
++        const regexp = /^[\x20-\x7F]+$/;
++        return regexp.test(input);
++    }
++    if (type === 'code93') {
++        // For Code93: Valid characters are digits (0-9), uppercase alphabets (A-Z),
++        // and special symbols (-, ., $, /, +, %, space).
++        const regexp = /^[\dA-Z\-\.\$\/\+\%\s]+$/;
++        return regexp.test(input);
++    }
+     if (type === 'nw7') {
+         // For NW-7: Valid characters are digits (0-9) and symbols (-, ., $, :, /, +).
+         // The first and last characters must be one of the alphabets A-D (start/stop codes).
+@@ -103,12 +115,33 @@ export const validateBarcodeInput = (type, input) => {
+         // but considering performance and library limitations, the maximum number of characters is limited (up to 1000 characters here).
+         return input.length > 0 && input.length <= 1000;
+     }
++    if (type === 'interleaved2of5') {
++        // For Interleaved 2 of 5: Valid characters are digits (0-9) only.
++        // Must have an EVEN number of digits (minimum 2).
++        const regexp = /^\d+$/;
++        if (!regexp.test(input))
++            return false;
++        // Even number of digits required
++        if (input.length % 2 !== 0)
++            return false;
++        // Minimum 2 digits
++        if (input.length < 2)
++            return false;
++        return true;
++    }
+     return false;
+ };
+ /**
+  * The bwip.js lib has a different name for nw7 type barcodes
++ * code128b uses code128 encoder (bwip-js automatically handles subsets)
+  */
+-export const barCodeType2Bcid = (type) => type === 'nw7' ? 'rationalizedCodabar' : type;
++export const barCodeType2Bcid = (type) => {
++    if (type === 'nw7')
++        return 'rationalizedCodabar';
++    if (type === 'code128b')
++        return 'code128';
++    return type;
++};
+ /**
+  *  Strip hash from the beginning of HTML hex color codes for the bwip.js lib
+  */
+@@ -116,16 +149,27 @@ export const mapHexColorForBwipJsLib = (color, fallback) => color ? color.replac
+ export const createBarCode = async (arg) => {
+     const { type, input, width, height, backgroundColor, barColor, textColor, includetext = DEFAULT_BARCODE_INCLUDETEXT, } = arg;
+     const bcid = barCodeType2Bcid(type);
++    console.log('[DEBUG CODE93] Type:', type, 'BCID:', bcid, 'Input:', input);
+     const scale = 5;
+     const bwipjsArg = {
+         bcid,
+         text: input,
+-        width,
+-        height,
+         scale,
+         includetext,
+         textxalign: 'center',
+     };
++    // Code93 specific parameters
++    if (type === 'code93') {
++        bwipjsArg.width = width;
++        bwipjsArg.height = height;
++        bwipjsArg.includecheck = true; // Include check digits
++        bwipjsArg.parsefnc = true; // Parse function codes
++        console.log('[DEBUG] Code93 with width:', width, 'height:', height, 'scale:', bwipjsArg.scale);
++    }
++    else {
++        bwipjsArg.width = width;
++        bwipjsArg.height = height;
++    }
+     if (backgroundColor)
+         bwipjsArg.backgroundcolor = mapHexColorForBwipJsLib(backgroundColor);
+     if (barColor)
+diff --git a/node_modules/@pdfme/schemas/dist/esm/src/barcodes/propPanel.js b/node_modules/@pdfme/schemas/dist/esm/src/barcodes/propPanel.js
+index d04a9f8..fc91828 100644
+--- a/node_modules/@pdfme/schemas/dist/esm/src/barcodes/propPanel.js
++++ b/node_modules/@pdfme/schemas/dist/esm/src/barcodes/propPanel.js
+@@ -93,6 +93,34 @@ const barcodeDefaults = [
+             opacity: DEFAULT_OPACITY,
+         },
+     },
++    {
++        defaultSchema: {
++            name: '',
++            type: 'code128b',
++            content: 'Code128B Example',
++            position,
++            ...defaultColors,
++            ...defaultTextColors,
++            ...defaultIncludetext,
++            ...default40x20,
++            rotate: 0,
++            opacity: DEFAULT_OPACITY,
++        },
++    },
++    {
++        defaultSchema: {
++            name: '',
++            type: 'code93',
++            content: 'CODE93 EXAMPLE',
++            position,
++            ...defaultColors,
++            ...defaultTextColors,
++            ...defaultIncludetext,
++            ...default40x20,
++            rotate: 0,
++            opacity: DEFAULT_OPACITY,
++        },
++    },
+     {
+         defaultSchema: {
+             name: '',
+@@ -122,6 +150,21 @@ const barcodeDefaults = [
+             opacity: DEFAULT_OPACITY,
+         },
+     },
++    {
++        defaultSchema: {
++            name: '',
++            type: 'interleaved2of5',
++            content: '1234567890',
++            position,
++            ...defaultColors,
++            ...defaultTextColors,
++            ...defaultIncludetext,
++            ...default40x20,
++            height: 12,
++            rotate: 0,
++            opacity: DEFAULT_OPACITY,
++        },
++    },
+     {
+         defaultSchema: {
+             name: '',
+diff --git a/node_modules/@pdfme/schemas/dist/node/src/barcodes/constants.js b/node_modules/@pdfme/schemas/dist/node/src/barcodes/constants.js
+index 2ff7f5d..a96b388 100644
+--- a/node_modules/@pdfme/schemas/dist/node/src/barcodes/constants.js
++++ b/node_modules/@pdfme/schemas/dist/node/src/barcodes/constants.js
+@@ -8,12 +8,15 @@ exports.BARCODE_TYPES = [
+     'ean8',
+     'code39',
+     'code128',
++    'code128b',
++    'code93',
+     'nw7',
+     'itf14',
+     'upca',
+     'upce',
+     'gs1datamatrix',
+     'pdf417',
++    'interleaved2of5',
+ ];
+ exports.DEFAULT_BARCODE_BG_COLOR = '#ffffff';
+ exports.DEFAULT_BARCODE_COLOR = '#000000';
+diff --git a/node_modules/@pdfme/schemas/dist/node/src/barcodes/helper.js b/node_modules/@pdfme/schemas/dist/node/src/barcodes/helper.js
+index 552328e..1234f06 100644
+--- a/node_modules/@pdfme/schemas/dist/node/src/barcodes/helper.js
++++ b/node_modules/@pdfme/schemas/dist/node/src/barcodes/helper.js
+@@ -65,6 +65,18 @@ const validateBarcodeInput = (type, input) => {
+         // https://qiita.com/graminume/items/2ac8dd9c32277fa9da64
+         return !input.match(/([\u30a0-\u30ff\u3040-\u309f\u3005-\u3006\u30e0-\u9fcf]|[Ａ-Ｚａ-ｚ０-９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝〜　])+/);
+     }
++    if (type === 'code128b') {
++        // For Code128B: Subset B encodes uppercase and lowercase letters, digits, and standard ASCII symbols (space to DEL).
++        // Valid characters are ASCII 32-127.
++        const regexp = /^[\x20-\x7F]+$/;
++        return regexp.test(input);
++    }
++    if (type === 'code93') {
++        // For Code93: Valid characters are digits (0-9), uppercase alphabets (A-Z),
++        // and special symbols (-, ., $, /, +, %, space).
++        const regexp = /^[\dA-Z\-\.\$\/\+\%\s]+$/;
++        return regexp.test(input);
++    }
+     if (type === 'nw7') {
+         // For NW-7: Valid characters are digits (0-9) and symbols (-, ., $, :, /, +).
+         // The first and last characters must be one of the alphabets A-D (start/stop codes).
+@@ -109,13 +121,34 @@ const validateBarcodeInput = (type, input) => {
+         // but considering performance and library limitations, the maximum number of characters is limited (up to 1000 characters here).
+         return input.length > 0 && input.length <= 1000;
+     }
++    if (type === 'interleaved2of5') {
++        // For Interleaved 2 of 5: Valid characters are digits (0-9) only.
++        // Must have an EVEN number of digits (minimum 2).
++        const regexp = /^\d+$/;
++        if (!regexp.test(input))
++            return false;
++        // Even number of digits required
++        if (input.length % 2 !== 0)
++            return false;
++        // Minimum 2 digits
++        if (input.length < 2)
++            return false;
++        return true;
++    }
+     return false;
+ };
+ exports.validateBarcodeInput = validateBarcodeInput;
+ /**
+  * The bwip.js lib has a different name for nw7 type barcodes
++ * code128b uses code128 encoder (bwip-js automatically handles subsets)
+  */
+-const barCodeType2Bcid = (type) => type === 'nw7' ? 'rationalizedCodabar' : type;
++const barCodeType2Bcid = (type) => {
++    if (type === 'nw7')
++        return 'rationalizedCodabar';
++    if (type === 'code128b')
++        return 'code128';
++    return type;
++};
+ exports.barCodeType2Bcid = barCodeType2Bcid;
+ /**
+  *  Strip hash from the beginning of HTML hex color codes for the bwip.js lib
+@@ -125,16 +158,27 @@ exports.mapHexColorForBwipJsLib = mapHexColorForBwipJsLib;
+ const createBarCode = async (arg) => {
+     const { type, input, width, height, backgroundColor, barColor, textColor, includetext = constants_js_1.DEFAULT_BARCODE_INCLUDETEXT, } = arg;
+     const bcid = (0, exports.barCodeType2Bcid)(type);
++    console.log('[DEBUG CODE93] Type:', type, 'BCID:', bcid, 'Input:', input);
+     const scale = 5;
+     const bwipjsArg = {
+         bcid,
+         text: input,
+-        width,
+-        height,
+         scale,
+         includetext,
+         textxalign: 'center',
+     };
++    // Code93 specific parameters
++    if (type === 'code93') {
++        bwipjsArg.width = width;
++        bwipjsArg.height = height;
++        bwipjsArg.includecheck = true; // Include check digits
++        bwipjsArg.parsefnc = true; // Parse function codes
++        console.log('[DEBUG] Code93 with width:', width, 'height:', height, 'scale:', bwipjsArg.scale);
++    }
++    else {
++        bwipjsArg.width = width;
++        bwipjsArg.height = height;
++    }
+     if (backgroundColor)
+         bwipjsArg.backgroundcolor = (0, exports.mapHexColorForBwipJsLib)(backgroundColor);
+     if (barColor)
+diff --git a/node_modules/@pdfme/schemas/dist/node/src/barcodes/propPanel.js b/node_modules/@pdfme/schemas/dist/node/src/barcodes/propPanel.js
+index 5551a25..e09809c 100644
+--- a/node_modules/@pdfme/schemas/dist/node/src/barcodes/propPanel.js
++++ b/node_modules/@pdfme/schemas/dist/node/src/barcodes/propPanel.js
+@@ -96,6 +96,34 @@ const barcodeDefaults = [
+             opacity: constants_js_2.DEFAULT_OPACITY,
+         },
+     },
++    {
++        defaultSchema: {
++            name: '',
++            type: 'code128b',
++            content: 'Code128B Example',
++            position,
++            ...defaultColors,
++            ...defaultTextColors,
++            ...defaultIncludetext,
++            ...default40x20,
++            rotate: 0,
++            opacity: constants_js_2.DEFAULT_OPACITY,
++        },
++    },
++    {
++        defaultSchema: {
++            name: '',
++            type: 'code93',
++            content: 'CODE93 EXAMPLE',
++            position,
++            ...defaultColors,
++            ...defaultTextColors,
++            ...defaultIncludetext,
++            ...default40x20,
++            rotate: 0,
++            opacity: constants_js_2.DEFAULT_OPACITY,
++        },
++    },
+     {
+         defaultSchema: {
+             name: '',
+@@ -125,6 +153,21 @@ const barcodeDefaults = [
+             opacity: constants_js_2.DEFAULT_OPACITY,
+         },
+     },
++    {
++        defaultSchema: {
++            name: '',
++            type: 'interleaved2of5',
++            content: '1234567890',
++            position,
++            ...defaultColors,
++            ...defaultTextColors,
++            ...defaultIncludetext,
++            ...default40x20,
++            height: 12,
++            rotate: 0,
++            opacity: constants_js_2.DEFAULT_OPACITY,
++        },
++    },
+     {
+         defaultSchema: {
+             name: '',
+diff --git a/node_modules/@pdfme/schemas/dist/types/src/barcodes/constants.d.ts b/node_modules/@pdfme/schemas/dist/types/src/barcodes/constants.d.ts
+index 3d3a576..5eaa507 100644
+--- a/node_modules/@pdfme/schemas/dist/types/src/barcodes/constants.d.ts
++++ b/node_modules/@pdfme/schemas/dist/types/src/barcodes/constants.d.ts
+@@ -1,4 +1,4 @@
+-export declare const BARCODE_TYPES: readonly ["qrcode", "japanpost", "ean13", "ean8", "code39", "code128", "nw7", "itf14", "upca", "upce", "gs1datamatrix", "pdf417"];
++export declare const BARCODE_TYPES: readonly ["qrcode", "japanpost", "ean13", "ean8", "code39", "code128", "code128b", "code93", "nw7", "itf14", "upca", "upce", "gs1datamatrix", "pdf417", "interleaved2of5"];
+ export declare const DEFAULT_BARCODE_BG_COLOR = "#ffffff";
+ export declare const DEFAULT_BARCODE_COLOR = "#000000";
+ export declare const DEFAULT_BARCODE_INCLUDETEXT = true;
+diff --git a/node_modules/@pdfme/schemas/dist/types/src/barcodes/index.d.ts b/node_modules/@pdfme/schemas/dist/types/src/barcodes/index.d.ts
+index 8f66ac3..ed55060 100644
+--- a/node_modules/@pdfme/schemas/dist/types/src/barcodes/index.d.ts
++++ b/node_modules/@pdfme/schemas/dist/types/src/barcodes/index.d.ts
+@@ -1,4 +1,4 @@
+-import type { BarcodeSchema } from './types.js';
++import type { BarcodeSchema, BarcodeTypes } from './types.js';
+ import { Plugin } from '@pdfme/common';
+-declare const barcodes: Record<"qrcode" | "japanpost" | "ean13" | "ean8" | "code39" | "code128" | "nw7" | "itf14" | "upca" | "upce" | "gs1datamatrix" | "pdf417", Plugin<BarcodeSchema>>;
++declare const barcodes: Record<BarcodeTypes, Plugin<BarcodeSchema>>;
+ export default barcodes;
+diff --git a/node_modules/@pdfme/schemas/src/barcodes/constants.ts b/node_modules/@pdfme/schemas/src/barcodes/constants.ts
+index 7d51145..45002b3 100644
+--- a/node_modules/@pdfme/schemas/src/barcodes/constants.ts
++++ b/node_modules/@pdfme/schemas/src/barcodes/constants.ts
+@@ -5,12 +5,15 @@ export const BARCODE_TYPES = [
+   'ean8',
+   'code39',
+   'code128',
++  'code128b',
++  'code93',
+   'nw7',
+   'itf14',
+   'upca',
+   'upce',
+   'gs1datamatrix',
+   'pdf417',
++  'interleaved2of5',
+ ] as const;
+ 
+ export const DEFAULT_BARCODE_BG_COLOR = '#ffffff';
+diff --git a/node_modules/@pdfme/schemas/src/barcodes/helper.ts b/node_modules/@pdfme/schemas/src/barcodes/helper.ts
+index 53f7ade..95a51b2 100644
+--- a/node_modules/@pdfme/schemas/src/barcodes/helper.ts
++++ b/node_modules/@pdfme/schemas/src/barcodes/helper.ts
+@@ -65,6 +65,18 @@ export const validateBarcodeInput = (type: BarcodeTypes, input: string) => {
+       /([\u30a0-\u30ff\u3040-\u309f\u3005-\u3006\u30e0-\u9fcf]|[Ａ-Ｚａ-ｚ０-９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝〜　])+/,
+     );
+   }
++  if (type === 'code128b') {
++    // For Code128B: Subset B encodes uppercase and lowercase letters, digits, and standard ASCII symbols (space to DEL).
++    // Valid characters are ASCII 32-127.
++    const regexp = /^[\x20-\x7F]+$/;
++    return regexp.test(input);
++  }
++  if (type === 'code93') {
++    // For Code93: Valid characters are digits (0-9), uppercase alphabets (A-Z),
++    // and special symbols (-, ., $, /, +, %, space).
++    const regexp = /^[\dA-Z\-\.\$\/\+\%\s]+$/;
++    return regexp.test(input);
++  }
+   if (type === 'nw7') {
+     // For NW-7: Valid characters are digits (0-9) and symbols (-, ., $, :, /, +).
+     // The first and last characters must be one of the alphabets A-D (start/stop codes).
+@@ -111,15 +123,33 @@ export const validateBarcodeInput = (type: BarcodeTypes, input: string) => {
+     // but considering performance and library limitations, the maximum number of characters is limited (up to 1000 characters here).
+     return input.length > 0 && input.length <= 1000;
+   }
++  if (type === 'interleaved2of5') {
++    // For Interleaved 2 of 5: Valid characters are digits (0-9) only.
++    // Must have an EVEN number of digits (minimum 2).
++    const regexp = /^\d+$/;
++    if (!regexp.test(input)) return false;
++    
++    // Even number of digits required
++    if (input.length % 2 !== 0) return false;
++    
++    // Minimum 2 digits
++    if (input.length < 2) return false;
++    
++    return true;
++  }
+ 
+   return false;
+ };
+ 
+ /**
+  * The bwip.js lib has a different name for nw7 type barcodes
++ * code128b uses code128 encoder (bwip-js automatically handles subsets)
+  */
+-export const barCodeType2Bcid = (type: BarcodeTypes) =>
+-  type === 'nw7' ? 'rationalizedCodabar' : type;
++export const barCodeType2Bcid = (type: BarcodeTypes) => {
++  if (type === 'nw7') return 'rationalizedCodabar';
++  if (type === 'code128b') return 'code128';
++  return type;
++};
+ 
+ /**
+  *  Strip hash from the beginning of HTML hex color codes for the bwip.js lib
+@@ -153,13 +183,22 @@ export const createBarCode = async (arg: {
+   const bwipjsArg: RenderOptions = {
+     bcid,
+     text: input,
+-    width,
+-    height,
+     scale,
+     includetext,
+     textxalign: 'center',
+   };
+ 
++  // Code93 specific parameters
++  if (type === 'code93') {
++    bwipjsArg.width = width;
++    bwipjsArg.height = height;
++    bwipjsArg.includecheck = true; // Include check digits
++    bwipjsArg.parsefnc = true; // Parse function codes
++  } else {
++    bwipjsArg.width = width;
++    bwipjsArg.height = height;
++  }
++
+   if (backgroundColor) bwipjsArg.backgroundcolor = mapHexColorForBwipJsLib(backgroundColor);
+   if (barColor) bwipjsArg.barcolor = mapHexColorForBwipJsLib(barColor);
+   if (textColor) bwipjsArg.textcolor = mapHexColorForBwipJsLib(textColor);
+diff --git a/node_modules/@pdfme/schemas/src/barcodes/propPanel.ts b/node_modules/@pdfme/schemas/src/barcodes/propPanel.ts
+index f9fa0be..d7e0df8 100644
+--- a/node_modules/@pdfme/schemas/src/barcodes/propPanel.ts
++++ b/node_modules/@pdfme/schemas/src/barcodes/propPanel.ts
+@@ -101,6 +101,34 @@ const barcodeDefaults: { defaultSchema: BarcodeSchema }[] = [
+       opacity: DEFAULT_OPACITY,
+     },
+   },
++  {
++    defaultSchema: {
++      name: '',
++      type: 'code128b',
++      content: 'Code128B Example',
++      position,
++      ...defaultColors,
++      ...defaultTextColors,
++      ...defaultIncludetext,
++      ...default40x20,
++      rotate: 0,
++      opacity: DEFAULT_OPACITY,
++    },
++  },
++  {
++    defaultSchema: {
++      name: '',
++      type: 'code93',
++      content: 'CODE93 EXAMPLE',
++      position,
++      ...defaultColors,
++      ...defaultTextColors,
++      ...defaultIncludetext,
++      ...default40x20,
++      rotate: 0,
++      opacity: DEFAULT_OPACITY,
++    },
++  },
+   {
+     defaultSchema: {
+       name: '',
+@@ -130,6 +158,21 @@ const barcodeDefaults: { defaultSchema: BarcodeSchema }[] = [
+       opacity: DEFAULT_OPACITY,
+     },
+   },
++  {
++    defaultSchema: {
++      name: '',
++      type: 'interleaved2of5',
++      content: '1234567890',
++      position,
++      ...defaultColors,
++      ...defaultTextColors,
++      ...defaultIncludetext,
++      ...default40x20,
++      height: 12,
++      rotate: 0,
++      opacity: DEFAULT_OPACITY,
++    },
++  },
+   {
+     defaultSchema: {
+       name: '',
