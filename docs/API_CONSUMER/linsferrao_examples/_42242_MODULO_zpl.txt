@@ -1,0 +1,390 @@
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+
+^XA                                                                                     
+^PQ1                                                                                    
+^FO30,10^A0N,18,13^FDPEDIDO: 111111^FS                                                  
+^FO30,25^A0N,45,34^FD11111111111111^FS                                                  
+^FO30,67^A0N,20,20^FDEMB: 111111111111111^FS                                            
+^FO30,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                               
+^FO30,103^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                               
+^FO30,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                 
+^FO30,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                         
+
+^FO30,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                       
+^FO11,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                         
+^FO11,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                                
+
+^FO310,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO310,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO310,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO310,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO310,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO310,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO310,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO310,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO291,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO291,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+
+^FO590,10^A0N,18,13^FDPEDIDO: 111111^FS                                                 
+^FO590,25^A0N,45,34^FD11111111111111^FS                                                 
+^FO590,67^A0N,20,20^FDEMB: 111111111111111^FS                                           
+^FO590,87^A0N,18,13^FD11111111111111 - AAAAA AAA AAAAAA^FS                              
+^FO590,105^A0N,18,13^FDAAAAA AAAAA AAAAAAA 111 AAAAAA ^FS                              
+^FO590,120^A0N,18,13^FDAAAAA | AAAAAA^FS                                                
+^FO590,135^BY2,2^B2N,40,N,N^FD111111111111111^FS                                        
+
+^FO590,178^A0N,15,15^FDAAAAAAA-AAAAAAAA & AAAA^FS                                      
+^FO571,195^FB260,40,0,R,0^A0N,30,30^FDQTD: 11^FS                                        
+^FO571,220^FB280,20,0,C,0^A0N,20,20^FD1 Modulo(s) C/11^FS                               
+^XZ
+

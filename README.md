@@ -126,7 +126,87 @@ NODE_ENV=development
 
 ---
 
-## 📚 API Endpoints
+## � API Usage Flow / Fluxo de Uso da API
+
+**EN:** Follow these steps to use the Tag Integrator API:
+
+### Step 1: Create a Company
+First, create a company record using:
+```
+POST /api/companies
+```
+This will register the company in the system. You can find ready-to-use company creation examples in the Insomnia collection located at:
+- `docs/API_CONSUMER/Insomnia_Collection.json`
+
+### Step 2: Upload Tag Files
+Upload your tag files using:
+```
+POST /api/upload?companyCode=YOUR_COMPANY_CODE
+```
+Example files for testing are available in:
+- `docs/API_CONSUMER/calcenter_examples/` - Calcenter tag files
+- `docs/API_CONSUMER/humanitarian_examples/` - Humanitarian tag files
+- `docs/API_CONSUMER/linsferrao_examples/` - Lins Ferrão tag files
+- `docs/API_CONSUMER/disantinni_examples/` - DiSantinni tag files
+
+These files will be processed and stored in the database.
+
+### Step 3: Get Tag IDs
+Retrieve the generated tag IDs from the database:
+```
+GET /api/tags?companyCode=YOUR_COMPANY_CODE
+```
+This endpoint returns all tags for the specified company with their respective IDs.
+
+### Step 4: Generate PDFs
+Finally, generate the PDF labels using the tag IDs:
+```
+POST /api/pdf/generate
+Body: { "tagIds": [1, 2, 3, ...] }
+```
+
+---
+
+**PT:** Siga estas etapas para usar a API do Tag Integrator:
+
+### Passo 1: Criar uma Empresa
+Primeiro, crie um registro de empresa usando:
+```
+POST /api/companies
+```
+Isso registrará a empresa no sistema. Você pode encontrar exemplos prontos de criação de empresas na coleção do Insomnia localizada em:
+- `docs/API_CONSUMER/Insomnia_Collection.json`
+
+### Passo 2: Enviar Arquivos de Etiquetas
+Envie seus arquivos de etiquetas usando:
+```
+POST /api/upload?companyCode=CODIGO_DA_EMPRESA
+```
+Arquivos de exemplo para testes estão disponíveis em:
+- `docs/API_CONSUMER/calcenter_examples/` - Arquivos de etiquetas Calcenter
+- `docs/API_CONSUMER/humanitarian_examples/` - Arquivos de etiquetas Humanitarian
+- `docs/API_CONSUMER/linsferrao_examples/` - Arquivos de etiquetas Lins Ferrão
+- `docs/API_CONSUMER/disantinni_examples/` - Arquivos de etiquetas DiSantinni
+
+Esses arquivos serão processados e armazenados no banco de dados.
+
+### Passo 3: Obter IDs das Etiquetas
+Recupere os IDs das etiquetas geradas do banco de dados:
+```
+GET /api/tags?companyCode=CODIGO_DA_EMPRESA
+```
+Este endpoint retorna todas as etiquetas da empresa especificada com seus respectivos IDs.
+
+### Passo 4: Gerar PDFs
+Finalmente, gere os PDFs das etiquetas usando os IDs das etiquetas:
+```
+POST /api/pdf/generate
+Body: { "tagIds": [1, 2, 3, ...] }
+```
+
+---
+
+## 📚 API Endpoints Reference / Referência de Endpoints da API
 
 ### Companies / Empresas
 

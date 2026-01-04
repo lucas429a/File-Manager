@@ -1,0 +1,360 @@
+^XA                                                                                        
+^PQ1                                                                                       
+^FO40,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO40,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                              
+^FO20,92^GB250,4,4^FS                                                                      
+^FO20,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                           
+^FO178,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO180,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO55,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                 
+^FO55,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                       
+^FO22,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                 
+^FO55,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                     
+^FO50,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                 
+^FO55,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                   
+^FO246,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO320,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO320,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO300,92^GB250,4,4^FS                                                                     
+^FO300,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO458,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO460,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO335,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO335,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO302,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO335,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO330,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO335,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO526,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO600,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO600,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO580,92^GB250,4,4^FS                                                                     
+^FO580,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO738,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO740,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO615,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO615,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO582,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO615,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO610,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO615,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO806,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+^XZ
+
+^XA                                                                                        
+^PQ1                                                                                       
+^FO40,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO40,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                              
+^FO20,92^GB250,4,4^FS                                                                      
+^FO20,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                           
+^FO178,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO180,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO55,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                 
+^FO55,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                       
+^FO22,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                 
+^FO55,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                     
+^FO50,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                 
+^FO55,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                   
+^FO246,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO320,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO320,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO300,92^GB250,4,4^FS                                                                     
+^FO300,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO458,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO460,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO335,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO335,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO302,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO335,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO330,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO335,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO526,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO600,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO600,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO580,92^GB250,4,4^FS                                                                     
+^FO580,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO738,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO740,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO615,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO615,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO582,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO615,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO610,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO615,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO806,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+^XZ
+
+^XA                                                                                        
+^PQ1                                                                                       
+^FO40,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO40,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                              
+^FO20,92^GB250,4,4^FS                                                                      
+^FO20,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                           
+^FO178,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO180,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO55,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                 
+^FO55,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                       
+^FO22,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                 
+^FO55,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                     
+^FO50,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                 
+^FO55,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                   
+^FO246,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO320,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO320,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO300,92^GB250,4,4^FS                                                                     
+^FO300,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO458,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO460,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO335,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO335,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO302,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO335,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO330,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO335,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO526,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO600,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO600,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO580,92^GB250,4,4^FS                                                                     
+^FO580,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO738,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO740,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO615,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO615,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO582,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO615,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO610,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO615,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO806,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+^XZ
+
+^XA                                                                                        
+^PQ1                                                                                       
+^FO40,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO40,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                              
+^FO20,92^GB250,4,4^FS                                                                      
+^FO20,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                           
+^FO178,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO180,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO55,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                 
+^FO55,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                       
+^FO22,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                 
+^FO55,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                     
+^FO50,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                 
+^FO55,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                   
+^FO246,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO320,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO320,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO300,92^GB250,4,4^FS                                                                     
+^FO300,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO458,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO460,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO335,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO335,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO302,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO335,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO330,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO335,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO526,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO600,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO600,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO580,92^GB250,4,4^FS                                                                     
+^FO580,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO738,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO740,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO615,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO615,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO582,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO615,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO610,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO615,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO806,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+^XZ
+
+^XA                                                                                        
+^PQ1                                                                                       
+^FO40,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO40,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                              
+^FO20,92^GB250,4,4^FS                                                                      
+^FO20,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                           
+^FO178,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO180,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO55,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                 
+^FO55,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                       
+^FO22,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                 
+^FO55,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                     
+^FO50,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                 
+^FO55,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                   
+^FO246,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO320,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO320,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO300,92^GB250,4,4^FS                                                                     
+^FO300,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO458,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO460,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO335,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO335,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO302,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO335,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO330,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO335,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO526,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO600,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO600,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO580,92^GB250,4,4^FS                                                                     
+^FO580,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO738,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO740,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO615,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO615,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO582,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO615,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO610,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO615,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO806,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+^XZ
+
+^XA                                                                                        
+^PQ1                                                                                       
+^FO40,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO40,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                              
+^FO20,92^GB250,4,4^FS                                                                      
+^FO20,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                           
+^FO178,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO180,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO55,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                 
+^FO55,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                       
+^FO22,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                 
+^FO55,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                     
+^FO50,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                 
+^FO55,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                   
+^FO246,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO320,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO320,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO300,92^GB250,4,4^FS                                                                     
+^FO300,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO458,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO460,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO335,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO335,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO302,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO335,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO330,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO335,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO526,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO600,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO600,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO580,92^GB250,4,4^FS                                                                     
+^FO580,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO738,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO740,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO615,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO615,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO582,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO615,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO610,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO615,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO806,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+^XZ
+
+^XA                                                                                        
+^PQ1                                                                                       
+^FO40,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO40,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                              
+^FO20,92^GB250,4,4^FS                                                                      
+^FO20,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                           
+^FO178,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO180,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO55,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                 
+^FO55,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                       
+^FO22,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                 
+^FO55,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                     
+^FO50,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                 
+^FO55,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                   
+^FO246,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO320,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO320,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO300,92^GB250,4,4^FS                                                                     
+^FO300,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO458,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO460,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO335,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO335,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO302,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO335,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO330,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO335,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO526,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO600,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO600,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO580,92^GB250,4,4^FS                                                                     
+^FO580,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO738,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO740,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO615,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO615,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO582,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO615,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO610,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO615,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO806,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+^XZ
+
+^XA                                                                                        
+^PQ1                                                                                       
+^FO40,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO40,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                              
+^FO20,92^GB250,4,4^FS                                                                      
+^FO20,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                           
+^FO178,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO180,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO55,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                 
+^FO55,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                       
+^FO22,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                 
+^FO55,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                     
+^FO50,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                 
+^FO55,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                   
+^FO246,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO320,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO320,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO300,92^GB250,4,4^FS                                                                     
+^FO300,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO458,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO460,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO335,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO335,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO302,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO335,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO330,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO335,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO526,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+
+^FO600,0^A0N,14,14^FDPEDIDO: 111111^FS                                                      
+^FO600,10^BY2,2^B2N,58,Y,N^FD11111111111111^FS                                             
+^FO580,92^GB250,4,4^FS                                                                     
+^FO580,98^FB200,1,0,L^A0N,30,17^FDAAAAAA/AAAAAA^FS                                          
+^FO738,98^FB90,1,,R^A0N,30,21^FD11^FS                                                      
+^FO740,211^FB60,1,,R^A0N,13,13^FD11/11^FS                                                  
+^FO615,125^FB215,1,,L^A0N,18,15^FD11111111111111 - AAAAA^FS                                
+^FO615,142^FB215,1,,L^A0N,16,14^FDAAAAA AAA AAAAAA^FS                                      
+^FO582,120^FB110,1,,C^A0B,32,32^FD111111^FS                                                
+^FO615,160^FB215,3,0,L^A0N,16,14^FDAAAAAA 111 AAAAAA AAAAA / AAAAAA^FS                    
+^FO610,184^FB240,1,,C^A0N,30,40^FD111,11^FS                                                
+^FO615,197^FB60,1,,L^A0N,13,13^FDAA^FS                                                  
+^FO806,175^A0B,16,13^FH_^FDAAAAA_11AA^FS                                                    
+^XZ
+
